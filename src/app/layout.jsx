@@ -1,7 +1,10 @@
-import { Geist, Geist_Mono } from "next/font/google";
+"use Client";
+import { Geist } from "next/font/google";
 import "./globals.css";
 import Header from "@/component/Header";
 import Footer from "@/component/Footer";
+import { Suspense } from "react";
+import FriendsProvider, { FriendsContext } from "@/context/FriendsContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,9 +24,11 @@ export default function RootLayout({ children }) {
       data-theme="light"
     >
       <body className="min-h-full flex flex-col">
-        <Header></Header>
-        <main>{children}</main>
-        <Footer></Footer>
+        <FriendsProvider>
+          <Header></Header>
+          <main className="bg-slate-100">{children}</main>
+          <Footer></Footer>
+        </FriendsProvider>
       </body>
     </html>
   );

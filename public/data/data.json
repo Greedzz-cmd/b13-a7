@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "Arjun Mehta",
+    "picture": "https://randomuser.me/api/portraits/men/32.jpg",
+    "email": "arjun.mehta@gmail.com",
+    "days_since_contact": 19,
+    "status": "overdue",
+    "tags": ["college", "tech"],
+    "bio": "BUET roommate, now a senior engineer at a Dhaka fintech. Bonded over all-nighters and bad coffee.",
+    "goal": 14,
+    "next_due_date": "2026-04-10"
+  },
+  {
+    "id": 2,
+    "name": "Nadia Rahman",
+    "picture": "https://randomuser.me/api/portraits/women/44.jpg",
+    "email": "nadia.rahman@outlook.com",
+    "days_since_contact": 6,
+    "status": "on-track",
+    "tags": ["family", "mentor"],
+    "bio": "Childhood family friend doing her PhD in public health in Toronto. My go-to for serious life advice.",
+    "goal": 21,
+    "next_due_date": "2026-04-29"
+  },
+  {
+    "id": 3,
+    "name": "Tariq Hossain",
+    "picture": "https://randomuser.me/api/portraits/men/18.jpg",
+    "email": "tariq.hossain@yahoo.com",
+    "days_since_contact": 45,
+    "status": "overdue",
+    "tags": ["childhood", "neighbor"],
+    "bio": "Grew up on the same street in Mirpur. Now in Chittagong for work. Every call feels like no time has passed.",
+    "goal": 30,
+    "next_due_date": "2026-04-02"
+  },
+  {
+    "id": 4,
+    "name": "Priya Kapoor",
+    "picture": "https://randomuser.me/api/portraits/women/61.jpg",
+    "email": "priya.k@protonmail.com",
+    "days_since_contact": 13,
+    "status": "almost due",
+    "tags": ["work", "travel"],
+    "bio": "Met at a design sprint in Bangalore. We've since backpacked through Nepal and Sri Lanka together.",
+    "goal": 14,
+    "next_due_date": "2026-04-15"
+  },
+  {
+    "id": 5,
+    "name": "Marcus Williams",
+    "picture": "https://randomuser.me/api/portraits/men/75.jpg",
+    "email": "marcus.w@gmail.com",
+    "days_since_contact": 3,
+    "status": "on-track",
+    "tags": ["online", "gaming"],
+    "bio": "Met via open-source on GitHub. Never in person, but we talk weekly. Cybersecurity engineer in Atlanta.",
+    "goal": 10,
+    "next_due_date": "2026-04-21"
+  },
+  {
+    "id": 6,
+    "name": "Sumaiya Akter",
+    "picture": "https://randomuser.me/api/portraits/women/29.jpg",
+    "email": "sumaiya.akter@gmail.com",
+    "days_since_contact": 27,
+    "status": "almost due",
+    "tags": ["college", "study"],
+    "bio": "Master's study partner from NSU. Now a data analyst at a UN agency. Kept sane by shared misery.",
+    "goal": 30,
+    "next_due_date": "2026-04-17"
+  },
+  {
+    "id": 7,
+    "name": "Leo Ferreira",
+    "picture": "https://randomuser.me/api/portraits/men/52.jpg",
+    "email": "leo.ferreira@icloud.com",
+    "days_since_contact": 62,
+    "status": "overdue",
+    "tags": ["travel", "hostel"],
+    "bio": "Met at a hostel in Istanbul in 2023. Freelance photographer from São Paulo. Three days felt like three years.",
+    "goal": 45,
+    "next_due_date": "2026-03-22"
+  },
+  {
+    "id": 8,
+    "name": "Fatema Begum",
+    "picture": "https://randomuser.me/api/portraits/women/17.jpg",
+    "email": "fatema.b@gmail.com",
+    "days_since_contact": 5,
+    "status": "on-track",
+    "tags": ["high school", "books"],
+    "bio": "Best friend since Class 9. Pediatrician now, still running the book club we both attend monthly.",
+    "goal": 14,
+    "next_due_date": "2026-04-23"
+  },
+  {
+    "id": 9,
+    "name": "Yuna Park",
+    "picture": "https://randomuser.me/api/portraits/women/82.jpg",
+    "email": "yuna.park@gmail.com",
+    "days_since_contact": 8,
+    "status": "on-track",
+    "tags": ["work", "design"],
+    "bio": "Met at a UX conference in Singapore. Product designer in Seoul. We trade Figma files and brutal feedback.",
+    "goal": 21,
+    "next_due_date": "2026-04-27"
+  },
+  {
+    "id": 10,
+    "name": "Rafiq Uddin",
+    "picture": "https://randomuser.me/api/portraits/men/64.jpg",
+    "email": "rafiq.uddin@gmail.com",
+    "days_since_contact": 90,
+    "status": "overdue",
+    "tags": ["cousin", "family"],
+    "bio": "First cousin in London. Inseparable as kids every Eid. The time difference makes months disappear.",
+    "goal": 60,
+    "next_due_date": "2026-02-12"
+  }
+]

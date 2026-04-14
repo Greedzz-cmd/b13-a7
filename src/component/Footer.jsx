@@ -27,7 +27,7 @@ const Footer = () => {
             <Image src={twitterPic} alt="twitter"></Image>
           </Link>
         </div>
-        <div className="flex flex-col md:flex-row gap-4 md:justify-between pt-8 mt-10 border-t border-[#1A886250]">
+        <div className="flex flex-col md:flex-row gap-4 md:justify-between pt-8 mt-10 border-t-[1.5px] border-[#1A886250]">
           <div>© 2026 KeenKeeper. All rights reserved.</div>
           <div className="flex gap-4 md:gap-10 flex-col md:flex-row">
             <div>Privacy Policy</div>
