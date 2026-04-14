@@ -2,6 +2,9 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { LuClock3 } from "react-icons/lu";
+import { PiChartLineBold } from "react-icons/pi";
+import { RiHome2Line } from "react-icons/ri";
 
 const Header = () => {
   const pathName = usePathname();
@@ -13,6 +16,7 @@ const Header = () => {
           href="/"
           className={`btn ${pathName == "/" ? "bg-accent-content text-white" : "btn-ghost"}`}
         >
+          <RiHome2Line className="h-5 w-5" />
           Home
         </Link>
       </li>
@@ -21,6 +25,7 @@ const Header = () => {
           href="/timeline"
           className={`btn ${pathName == "/timeline" ? "bg-success-content text-white" : "btn-ghost"}`}
         >
+          <LuClock3 className="h-5 w-5" />
           Timeline
         </Link>
       </li>
@@ -29,6 +34,7 @@ const Header = () => {
           href="/status"
           className={`btn ${pathName == "/status" ? "bg-success-content text-white" : "btn-ghost"}`}
         >
+          <PiChartLineBold className="h-5 w-5" />
           Status
         </Link>
       </li>

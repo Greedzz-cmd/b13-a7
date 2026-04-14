@@ -1,5 +1,7 @@
-const page = () => {
-  return <div>Timeline</div>;
+import React from "react";
+
+const TimeLinePage = () => {
+  return <div></div>;
 };
 
-export default page;
+export default TimeLinePage;

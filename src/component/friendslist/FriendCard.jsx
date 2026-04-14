@@ -1,5 +1,5 @@
 import Image from "next/image";
-import pfp from "../../../public/assets/Ellipse 1 (1).png";
+import Link from "next/link";
 
 const FriendCard = ({ friend }) => {
   let statusBg = "";
@@ -13,10 +13,19 @@ const FriendCard = ({ friend }) => {
   }
 
   return (
-    <div className="card bg-white shadow-sm grid justify-items-center p-6">
-      <Image src={pfp} alt="pfp"></Image>
-      <h2 className="text-xl font-semibold mt-4">John doe</h2>
-      <p>62d ago</p>
+    <Link
+      href={`/${friend.id}`}
+      className="card bg-white shadow-sm grid justify-items-center p-6"
+    >
+      <Image
+        src={friend.picture}
+        width={80}
+        height={80}
+        alt="profile picture"
+        className="rounded-full"
+      ></Image>
+      <h2 className="text-xl font-semibold mt-4">{friend.name}</h2>
+      <p className="text-xs text-slate-500">{friend.days_since_contact}d ago</p>
       <div className="flex gap-1 my-2">
         {friend.tags.map((tag, i) => {
           return (
@@ -32,7 +41,7 @@ const FriendCard = ({ friend }) => {
       <div className={`badge ${statusBg} text-white rounded-full`}>
         {friend.status}
       </div>
-    </div>
+    </Link>
   );
 };
 

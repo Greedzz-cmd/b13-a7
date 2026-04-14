@@ -2,6 +2,7 @@
 
 import FriendsContainer from "@/component/friendslist/FriendsContainer";
 import StatsContainer from "@/component/stats/StatsContainer";
+import { IoMdAdd } from "react-icons/io";
 
 export default function Home() {
   return (
@@ -15,7 +16,7 @@ export default function Home() {
           nurture the <br /> relationships that matter most.
         </p>
         <button className="btn bg-accent-content text-white">
-          Add a Friend
+          <IoMdAdd className="h-5 w-5" /> Add a Friend
         </button>
       </div>
       <StatsContainer></StatsContainer>

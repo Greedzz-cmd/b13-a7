@@ -1,6 +1,7 @@
 "use client";
 
 import { createContext, useEffect, useState } from "react";
+import { toast } from "react-toastify";
 
 export const FriendsContext = createContext();
 
@@ -18,9 +19,14 @@ const FriendsProvider = ({ children }) => {
     fetchFriends();
   }, []);
 
+  const handleToast = (buttonName, name) => {
+    toast.success(`${buttonName} with ${name}`);
+  };
+
   const data = {
     friends,
     loading,
+    handleToast,
   };
   return (
     <FriendsContext.Provider value={data}>{children}</FriendsContext.Provider>
