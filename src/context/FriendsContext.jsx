@@ -19,14 +19,49 @@ const FriendsProvider = ({ children }) => {
     fetchFriends();
   }, []);
 
-  const handleToast = (buttonName, name) => {
-    toast.success(`${buttonName} with ${name}`);
+  const handleToast = (buttonName, userName) => {
+    toast.success(`${buttonName} with ${userName}`);
+    addToTimeLine(buttonName, userName);
   };
+
+  const [timeLine, setTimeLine] = useState([]);
+  const addToTimeLine = (type, name) => {
+    const newEntry = {
+      type,
+      name,
+      date: new Date().toISOString(),
+    };
+    setTimeLine((prev) => [...prev, newEntry]);
+    console.log(timeLine);
+  };
+
+  const [sortingType, setSortingType] = useState("All");
+  const [filteredTimeLine, setFilteredTimeLine] = useState(timeLine);
+
+  useEffect(() => {
+    let result = [...timeLine];
+
+    if (sortingType === "newest") {
+      result.sort((a, b) => new Date(b.date) - new Date(a.date));
+    } else if (sortingType === "oldest") {
+      result.sort((a, b) => new Date(a.date) - new Date(b.date));
+    } else if (sortingType) {
+      result = result.filter((entry) => entry.type === sortingType);
+    }
+
+    setFilteredTimeLine(result);
+  }, [sortingType, timeLine]);
 
   const data = {
     friends,
     loading,
     handleToast,
+    timeLine,
+    setTimeLine,
+    filteredTimeLine,
+    setFilteredTimeLine,
+    setSortingType,
+    sortingType,
   };
   return (
     <FriendsContext.Provider value={data}>{children}</FriendsContext.Provider>
