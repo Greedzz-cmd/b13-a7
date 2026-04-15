@@ -15,7 +15,7 @@ export default function Home() {
           Your personal shelf of meaningful connections. Browse, tend, and
           nurture the <br /> relationships that matter most.
         </p>
-        <button className="btn bg-accent-content text-white">
+        <button className="btn bg-accent-content text-white transition-transform duration-200 hover:-translate-y-2">
           <IoMdAdd className="h-5 w-5" /> Add a Friend
         </button>
       </div>

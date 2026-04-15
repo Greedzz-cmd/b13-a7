@@ -5,8 +5,11 @@ import Image from "next/image";
 import { useParams } from "next/navigation";
 import { useContext } from "react";
 import { BiPhoneCall } from "react-icons/bi";
+import { HiOutlineBellSnooze } from "react-icons/hi2";
 import { IoMdText } from "react-icons/io";
 import { LuVideo } from "react-icons/lu";
+import { PiArchiveBold } from "react-icons/pi";
+import { RiDeleteBinLine } from "react-icons/ri";
 
 const FriendDetails = () => {
   const { friendId } = useParams();
@@ -33,7 +36,7 @@ const FriendDetails = () => {
   return (
     <div className="grid lg:grid-cols-3 my-20 w-11/12 mx-auto gap-6">
       <div className="">
-        <div className="card bg-white shadow-sm grid justify-items-center p-6">
+        <div className="card bg-white shadow-sm grid justify-items-center p-6 transition-transform duration-200 hover:-translate-y-2">
           <Image
             src={friend.picture}
             width={80}
@@ -41,7 +44,7 @@ const FriendDetails = () => {
             alt="profile picture"
             className="rounded-full"
           ></Image>
-          <h2 className="text-xl font-semibold mt-4">John doe</h2>
+          <h2 className="text-xl font-semibold mt-4">{friend.name}</h2>
           <div className={`badge ${statusBg} text-white rounded-full`}>
             {friend.status}
           </div>
@@ -63,12 +66,21 @@ const FriendDetails = () => {
           <p className="text-slate-500 text-[14px]">{friend.email}</p>
         </div>
         <div className="flex flex-col gap-3 mt-4">
-          <button className="btn">Snooze 2 Weeks</button>
-          <button className="btn">Archive</button>
-          <button className="btn">Delete</button>
+          <button className="btn transition-transform duration-200 hover:-translate-y-2">
+            <HiOutlineBellSnooze />
+            Snooze 2 Weeks
+          </button>
+          <button className="btn transition-transform duration-200 hover:-translate-y-2">
+            {" "}
+            <PiArchiveBold />
+            Archive
+          </button>
+          <button className="btn text-error transition-transform duration-200 hover:-translate-y-2">
+            <RiDeleteBinLine /> Delete
+          </button>
         </div>
       </div>
-      <div className="col-span-2">
+      <div className="lg:col-span-2">
         <div className="grid md:grid-cols-3 gap-6 text-center">
           <StatCard
             value={friend.days_since_contact}
@@ -96,7 +108,7 @@ const FriendDetails = () => {
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <button
               onClick={() => handleToast("Call", friend.name)}
-              className="btn min-w-53.75 text-center btn-xl "
+              className="btn min-w-53.75 text-center btn-xl transition-transform duration-200 hover:-translate-y-2"
             >
               <span>
                 <BiPhoneCall />
@@ -106,7 +118,7 @@ const FriendDetails = () => {
             </button>
             <button
               onClick={() => handleToast("Text", friend.name)}
-              className="btn min-w-53.75 text-center btn-xl"
+              className="btn min-w-53.75 text-center btn-xl transition-transform duration-200 hover:-translate-y-2"
             >
               <span>
                 <IoMdText />
@@ -116,7 +128,7 @@ const FriendDetails = () => {
             </button>
             <button
               onClick={() => handleToast("Video Call", friend.name)}
-              className="btn min-w-53.75 text-center btn-xl "
+              className="btn min-w-53.75 text-center btn-xl transition-transform duration-200 hover:-translate-y-2"
             >
               <span>
                 <LuVideo />
