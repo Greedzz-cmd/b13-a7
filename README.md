@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 💚 KeenKeeper
 
-## Getting Started
+> Your personal shelf of meaningful connections. Browse, tend, and nurture the relationships that matter most.
 
-First, run the development server:
+KeenKeeper is a friendship relationship manager that helps you stay connected with the people who matter. Track when you last reached out, log interactions, and never let an important friendship go cold.
+
+---
+
+## 🛠️ Technologies Used
+
+| Technology          | Purpose                            |
+| ------------------- | ---------------------------------- |
+| **Next.js 15**      | React framework with App Router    |
+| **React 19**        | UI components and state management |
+| **Tailwind CSS v4** | Utility-first styling              |
+| **DaisyUI v5**      | Component library                  |
+| **Recharts**        | Pie chart for friendship analytics |
+| **React Toastify**  | Toast notifications                |
+| **React Icons**     | Icon library                       |
+
+---
+
+## ✨ Key Features
+
+### 👫 Friend Management
+
+View all your friends in a clean 4-column grid. Each card shows their profile picture, name, days since last contact, tags, and a color-coded status badge — green for on-track, yellow for almost due, and red for overdue.
+
+### ⚡ Quick Check-In
+
+On each friend's detail page, log a **Call**, **Text**, or **Video Call** with a single button click. Every interaction is instantly saved to your timeline with the current date and time.
+
+### 📜 Timeline
+
+A full history of every interaction you've logged. Filter by interaction type (Call, Text, Video Call) or sort by newest and oldest. You can also search by friend name or interaction type.
+
+### 📊 Friendship Analytics
+
+A visual pie chart (powered by Recharts) showing the breakdown of your interactions — how many calls, texts, and video calls you've made across all friendships.
+
+### 📱 Fully Responsive
+
+Works seamlessly on mobile, tablet, and desktop. Includes a hamburger menu for mobile navigation.
+
+---
+
+## 🚀 Getting Started
 
 ```bash
+# Install dependencies
+npm install
+
+# Run the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📁 Project Structure
 
-## Learn More
+```
+src/
+├── app/
+│   ├── friend/[friendId]/   # Friend detail page
+│   ├── timeline/            # Timeline page
+│   ├── status/              # Analytics page
+│   ├── not-found.jsx        # 404 page
+│   ├── layout.jsx           # Root layout
+│   └── page.jsx             # Home page
+├── component/
+│   ├── friendslist/         # Friend card and grid
+│   ├── stats/               # Stat cards
+│   ├── statistics/          # Pie chart
+│   ├── timeLine/            # Timeline entries
+│   ├── Header.jsx
+│   └── Footer.jsx
+├── context/
+│   └── FriendsContext.jsx   # Global state
+└── utils/
+    └── localDB.js           # localStorage helpers
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🌐 Live Demo
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+[Live Link](#https://keenkeeper-rust.vercel.app/)
