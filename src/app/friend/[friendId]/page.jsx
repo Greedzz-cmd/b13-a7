@@ -2,7 +2,7 @@
 import StatCard from "@/component/stats/StatCard";
 import { FriendsContext } from "@/context/FriendsContext";
 import Image from "next/image";
-import { useParams } from "next/navigation";
+import { notFound, useParams } from "next/navigation";
 import { useContext } from "react";
 import { BiPhoneCall } from "react-icons/bi";
 import { HiOutlineBellSnooze } from "react-icons/hi2";
@@ -13,16 +13,27 @@ import { RiDeleteBinLine } from "react-icons/ri";
 
 const FriendDetails = () => {
   const { friendId } = useParams();
-  const { friends, handleToast } = useContext(FriendsContext);
-  const friend = friends.find((friend) => friend.id === Number(friendId));
+  const { friends } = useContext(FriendsContext);
+  const numericId = Number(friendId);
 
-  if (!friend) {
+  if (isNaN(numericId)) {
+    notFound();
+  }
+
+  const friend = friends.find((f, i) => f.id === numericId);
+
+  if (!friends || friends.length === 0) {
     return (
-      <div className=" flex justify-center py-80">
+      <div className="flex justify-center py-80">
         <span className="loading loading-spinner loading-xl text-success-content"></span>
       </div>
     );
   }
+
+  if (!friend) {
+    notFound();
+  }
+
   let statusBg = "";
 
   if (friend.status === "on-track") {
