@@ -13,7 +13,7 @@ import { RiDeleteBinLine } from "react-icons/ri";
 
 const FriendDetails = () => {
   const { friendId } = useParams();
-  const { friends } = useContext(FriendsContext);
+  const { friends, handleToast } = useContext(FriendsContext);
   const numericId = Number(friendId);
 
   if (isNaN(numericId)) {

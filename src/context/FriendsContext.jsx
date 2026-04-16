@@ -70,13 +70,8 @@ const FriendsProvider = ({ children }) => {
 
   const handleSearch = (value) => {
     const valueInLowerCase = value.toLowerCase().replaceAll(" ", "");
-    const result = timeLine.filter(
-      (entry) =>
-        entry.name
-          .toLowerCase()
-          .replaceAll(" ", "")
-          .includes(valueInLowerCase) ||
-        entry.type.toLowerCase().replaceAll(" ", "").includes(valueInLowerCase),
+    const result = timeLine.filter((entry) =>
+      entry.name.toLowerCase().replaceAll(" ", "").includes(valueInLowerCase),
     );
     setFilteredTimeLine(result);
   };

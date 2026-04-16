@@ -64,7 +64,7 @@ const TimeLinePage = () => {
             <input
               type="search"
               required
-              placeholder="Search"
+              placeholder="Search by Name"
               onKeyDown={(e) =>
                 e.key === "Enter" && handleSearch(e.target.value)
               }

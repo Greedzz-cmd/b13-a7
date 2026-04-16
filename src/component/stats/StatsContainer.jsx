@@ -4,7 +4,7 @@ import StatCard from "./StatCard";
 import { useContext } from "react";
 
 const StatsContainer = () => {
-  const { friends, loading } = useContext(FriendsContext);
+  const { friends, loading, timeLine } = useContext(FriendsContext);
 
   if (loading) {
     return (
@@ -28,7 +28,7 @@ const StatsContainer = () => {
       <StatCard value={onTrack} label={"On Track"}></StatCard>
       <StatCard value={needAttention} label={"Need Attention"}></StatCard>
       <StatCard
-        value={friends.length}
+        value={timeLine.length}
         label={"Interactions This Month"}
       ></StatCard>
     </div>
